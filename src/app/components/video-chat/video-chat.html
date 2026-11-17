@@ -12,7 +12,7 @@
 </div>
 <div class="example-button-row custom-margin">
   <button
-    matButton="tonal"
+    matButton="filled"
     color="primary"
     [disabled]="isCallStarted$ | async"
     (click)="showModal(false)"
@@ -20,11 +20,11 @@
     <span class="material-symbols-outlined video-space">call</span>
     Start Call
   </button>
-  <button matButton="tonal" [disabled]="isCallStarted$ | async" (click)="showModal(true)">
+  <button matButton="filled" [disabled]="isCallStarted$ | async" (click)="showModal(true)">
     <span class="material-symbols-outlined video-space">add_call</span>
     Join Call
   </button>
-  <button matButton="tonal" color="warn" [disabled]="isCallStarted$ | async" (click)="endCall()">
+  <button matButton="filled" color="warn" [disabled]="isCallStarted$ | async" (click)="endCall()">
     <span class="material-symbols-outlined video-space">call_end</span>
     End Call
   </button>

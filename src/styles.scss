@@ -15,7 +15,7 @@ html {
     ));
 
   @include mat.button-overrides((
-    tonal-label-text-font: 'Roboto Mono, monospace',
+    filled-label-text-font: 'Verdana, monospace',
   ));
 }
 
