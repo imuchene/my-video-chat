@@ -13,6 +13,10 @@ html {
       typography: Roboto,
       density: 0,
     ));
+
+  @include mat.button-overrides((
+    tonal-label-text-font: 'Roboto Mono, monospace',
+  ));
 }
 
 body {

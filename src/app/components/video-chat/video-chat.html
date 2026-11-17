@@ -1,1 +1,31 @@
-<h2 class="custom-margin">This component is working, yay!</h2>
+<div class="custom-margin">
+  <div id="video-wrapper">
+    <video
+      #remoteVideo
+      id="remote-video"
+      poster="./assets/video-placeholder.jpg"
+      autoplay
+      playsinline
+    ></video>
+    <video #localVideo id="local-video" autoplay playsinline [muted]="true"></video>
+  </div>
+</div>
+<div class="example-button-row custom-margin">
+  <button
+    matButton="tonal"
+    color="primary"
+    [disabled]="isCallStarted$ | async"
+    (click)="showModal(false)"
+  >
+    <span class="material-symbols-outlined video-space">call</span>
+    Start Call
+  </button>
+  <button matButton="tonal" [disabled]="isCallStarted$ | async" (click)="showModal(true)">
+    <span class="material-symbols-outlined video-space">add_call</span>
+    Join Call
+  </button>
+  <button matButton="tonal" color="warn" [disabled]="isCallStarted$ | async" (click)="endCall()">
+    <span class="material-symbols-outlined video-space">call_end</span>
+    End Call
+  </button>
+</div>
