@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-peerjs": {
+    "my-video-chat": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -60,10 +60,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-peerjs:build:production"
+              "buildTarget": "my-video-chat:build:production"
             },
             "development": {
-              "buildTarget": "angular-peerjs:build:development"
+              "buildTarget": "my-video-chat:build:development"
             }
           },
           "defaultConfiguration": "development"

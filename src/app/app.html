@@ -1,6 +1,11 @@
 <p class="top-navbar">
   <mat-toolbar role="toolbar">
-    <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
+    <button
+      matIconButton
+      class="example-icon mobile-menu-btn"
+      aria-label="Example icon-button with menu icon"
+      (click)="sidenav.toggle()"
+    >
       <mat-icon>menu</mat-icon>
     </button>
     <span class="material-symbols-outlined video-space">videocam</span>
@@ -18,5 +23,11 @@
     </button>
   </mat-toolbar>
 </p>
+<mat-sidenav-container class="example-container mobile-menu-btn">
+  <mat-sidenav #sidenav mode="side" class="example-sidenav">Sidenav</mat-sidenav>
+  <mat-sidenav-content>
+    <p>This is a test</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 <router-outlet />
