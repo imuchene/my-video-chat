@@ -10,7 +10,8 @@ import { Observable, of } from 'rxjs';
   templateUrl: './video-chat.html',
 })
 export class VideoChat {
-  isCallStarted$: Observable<boolean> = of(false);
+  isCallStarted$: Observable<boolean>;
+  private peerId: string;
 
   showModal(test: boolean): Observable<boolean> {
     return of(test);

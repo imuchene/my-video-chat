@@ -1,22 +1,11 @@
 <div class="custom-margin">
   <div id="video-wrapper">
-    <video
-      #remoteVideo
-      id="remote-video"
-      poster="./assets/video-placeholder.jpg"
-      autoplay
-      playsinline
-    ></video>
+    <video #remoteVideo id="remote-video" poster="./assets/video-placeholder.jpg" autoplay playsinline></video>
     <video #localVideo id="local-video" autoplay playsinline [muted]="true"></video>
   </div>
 </div>
 <div class="example-button-row custom-margin">
-  <button
-    matButton="filled"
-    color="primary"
-    [disabled]="isCallStarted$ | async"
-    (click)="showModal(false)"
-  >
+  <button matButton="filled" color="primary" [disabled]="isCallStarted$ | async" (click)="showModal(false)">
     <span class="material-symbols-outlined video-space">call</span>
     Start Call
   </button>
